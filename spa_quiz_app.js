@@ -26,7 +26,7 @@ function handle_app_event(e){
 
     console.log("button pressed");
     if(e.target.id=="q1_btn"){
-        create_quiz1(load_next());
+        create_quiz1(1);
         
     }
     if(e.target.id=="q2_btn"){
