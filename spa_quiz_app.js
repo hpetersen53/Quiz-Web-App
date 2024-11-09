@@ -11,6 +11,7 @@ const appState = {
 document.addEventListener('DOMContentLoaded', () => {
 
    fetch_questions();
+   
 
    document.querySelector("#app_widget").onclick = (e) =>{
         handle_app_event(e);
@@ -25,18 +26,20 @@ function handle_app_event(e){
 
     console.log("button pressed");
     if(e.target.id=="q1_btn"){
-        update_view("quiz1_view");
-        create_quiz(0);
+        create_quiz1(load_next());
+        
     }
     if(e.target.id=="q2_btn"){
-        update_view("quiz2_view");
+        create_quiz2(1);
         
     }
     
 }
 
 function handle_answer(e){
-
+    
+    
+   
     
 
 }
@@ -45,7 +48,7 @@ async function fetch_questions(){
     const data = await fetch('https://my-json-server.typicode.com/hpetersen53/quiz-web-app/db')
 }
 
-const create_quiz = async (quiz_id) =>{
+const create_quiz1 = async (quiz_id) =>{
     
     const data = await fetch('https://my-json-server.typicode.com/hpetersen53/quiz-web-app/db')
     const model = await data.json()
@@ -53,8 +56,20 @@ const create_quiz = async (quiz_id) =>{
     document.querySelector("#app_widget").innerHTML = html;
 
 }
+const create_quiz2 = async (quiz_id) =>{
+    
+    const data = await fetch('https://my-json-server.typicode.com/hpetersen53/quiz-web-app/db')
+    const model = await data.json()
+    const html = render_view(model, '#quiz2_view')
+    document.querySelector("#app_widget").innerHTML = html;
 
+}
 
+// function load_next(){
+//     var shuffle = Math.floor((Math.random() * 5) + 1)
+//     console.log(shuffle)
+
+// }
 
 
 const render_view = (model, view) => {
@@ -74,9 +89,6 @@ function update_view(current_view) {
     document.querySelector("#app_widget").innerHTML = html;
 
 }
-
-
-
 
 
 
