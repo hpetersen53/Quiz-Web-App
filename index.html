@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<head>
+
+    <!-- bootstrap dependencies -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+    <!-- handlebars library -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <script src="spa_quiz_app.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Quiz Application</title>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Quiz Application</a>
+            <a onclick="update_view('#welcome_view')" class="navbar-brand" href="#">Click to Start</a>
+        </div>
+    </nav>
+
+
+    
+    <div class="container h-100">
+        <div class="row align-items-center h-100">
+            <div class="col-8 mx-auto">
+
+                <div id="app_widget" class="align-items-center">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+
+    </body>
+
+    <!-- welcome view -->
+     <script id="welcome_view" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Welcome</h1>
+                    <form id="get_name">
+                        <label for="name">My Name Is: </label>
+                        <input type="text" name="name" id="input_name" placeholder="Enter Your Name">
+                        
+                        <hr>
+                    </form>
+                        Which quiz would you like to take?
+                        <br>
+                        <button onclick="update_view('#quiz1_view')" id="q1_btn" class="btn btn-primary" style="width: 90%; margin-top: 5px">Quiz 1</button>
+                        <button onclick="update_view('#quiz2_view')" id="q2_btn" class="btn btn-primary" style="width: 90%; margin-top: 5px">Quiz 2</button>
+                        
+                </div>
+                
+            </div>
+    
+        </div>
+       
+     </script>
+
+    <!-- quiz 1 view -->
+
+    <script id="quiz1_view" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="counter">
+                        <i class="fa fa-lightbulb-o fa-2x"></i>
+                        <h2 class="timer count-title count-number">{{this.current_hire}}</h2>
+                        <p class="count-text">People Hired</p>
+                    </div>
+                
+                    <div class="counter" style="margin-top: 20px">
+                        <i class="fa fa-bug fa-2x"></i>
+                        <h2 class="timer count-title count-number">{{this.current_fire}}</h2>
+                        <p class="count-text">People Fired</p>
+                    </div>
+            
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 350px">
+                        <h4 class="text-center"> Hire or Fire?</h4>
+                        <img class="cart-img-top" src="{{this.results.0.picture.large}}" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title"> {{this.results.0.name.title}} {{this.results.0.name.first}}
+                                {{this.results.0.name.last}}</h4>
+                            <div>
+                                <button class="btn btn-primary pull-left" data-vote="hire">Hire</button>
+                                <button class="btn btn-danger float-right" data-vote="fire">Fire</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </script>
+
+    <!-- quiz 2 view -->
+
+    <script id="quiz2_view" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center">Welcome to Quiz 2</h1>
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="card-title">Question #</div>
+                        </div>
+
+
+                    </div>
+                    
+                        
+                        
+                </div>
+                
+            </div>
+
+        </div>
+    </script>
+
+    <!-- completed quiz view -->
+
+
+
+
+
+
+ 
+
+   
+
+
+       
+
+    
+
+
+
+
