@@ -1,75 +1,49 @@
 {
-    "quizzes": [
+    "questions" : [
         {
-            "question_set1": [
-                {
-                    "questions": [
-                        {
-                            "question_num": 1,
-                            "question": "What does HTML stand for?",
-                            "exp_answer": "Hypertext Markup Language"
-                        },
-                        {
-                            "question_num": 2,
-                            "question": "What does HTML stand for?",
-                            "exp_answer": "Hypertext Markup Language"
-                        },
-                        {
-                            "question_num": 3,
-                            "question": "What does HTML stand for?",
-                            "exp_answer": "Hypertext Markup Language"
-                        },
-                        {
-                            "question_num": 4,
-                            "question": "What does HTML stand for?",
-                            "exp_answer": "Hypertext Markup Language"
-                        },
-                        {
-                            "question_num": 5,
-                            "question": "What does HTML stand for?",
-                            "exp_answer": "Hypertext Markup Language"
-                        }
-                    ]
-                }
-            ],
-            "id": 1
+            "q_id" : 1,
+            "type" : "text",
+            "question": "What does HTML stand for?",
+            "exp_answer": "Hyper text markup language"
         },
         {
-            "question_set2": [
-                {
-                    "questions": [
-                        {
-                            "question_num": 1,
-                            "question": "What does HTML stand for?",
-                            "exp_answer": "Hypertext Markup Language"
-                        },
-                        {
-                            "question_num": 2,
-                            "question": "What does HTML stand for?",
-                            "exp_answer": "Hypertext Markup Language"
-                        },
-                        {
-                            "question_num": 3,
-                            "question": "What does HTML stand for?",
-                            "exp_answer": "Hypertext Markup Language"
-                        },
-                        {
-                            "question_num": 4,
-                            "question": "What does HTML stand for?",
-                            "exp_answer": "Hypertext Markup Language"
-                        },
-                        {
-                            "question_num": 5,
-                            "question": "What does HTML stand for?",
-                            "exp_answer": "Hypertext Markup Language"
-                        }
-                    ]
-                }
-            ],
-            "id": 2
+            "q_id" : 2,
+            "type" : "multiple",
+            "question": "What is the correct way to print in Java",
+            "exp_answer": "System.out.println()",
+            "option1" : "cout <<",
+            "option2" : "print()",
+            "option3" : "System.out.println()"
+        },
+        {
+            "q_id" : 3,
+            "type" : "t/f",
+            "question": "CSS is a backend framework",
+            "exp_answer": "false",
+            "option1" : "true",
+            "option2" : "false"
+        },
+        {
+            "q_id" : 4,
+            "type" : "multiple images",
+            "question": "Which is the ID selector?",
+            "exp_answer": "#",
+            "option1" : "#",
+            "option2" : "."
+        },
+        {
+            "q_id" : 5,
+            "type" : "text",
+            "question": "What year was C# made?",
+            "exp_answer": "2000"
         }
+
+
+
+
+
+
+
     ]
-
-
 }
 
